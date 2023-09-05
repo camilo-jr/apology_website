@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apology to Babii</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <style>
+        .navbar{
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+        h2, p{
+            color: hsl(0, 0%, 4%) !important;
+        }
+        .hero{
+            height: 100vh;
+            background: url(img/bg-1.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+        .transparent-card {
+            background-color: rgba(225, 225, 225, 0.2) !important; 
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            border: none  !important; /* Remove card border if needed */
+            width: 100% !important;
+            height: 400px;
+            margin-top:40px !important;
+            padding: 20px;
+            margin: auto;
+        }
+        img:hover{
+
+        }
+
+        audio{
+            margin-bottom: 50px;
+        }
+        .modal-card-body{
+            background: none;
+            border-radius: 10px;
+            width: 70%;
+            margin: auto;
+        }
+        video{
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar is-light is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="#">
+                <strong style="color: #000; font-weight: 900;">I LOVE YOU</strong>
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a href="index.html" class="navbar-item">
+                    Home
+                </a>
+
+                <a href="flower.html" class="navbar-item">
+                    Flower
+                </a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        More
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a href="sorry.html" class="navbar-item">
+                            Letter
+                        </a>
+                        <a href="heart.html" class="navbar-item">
+                            Heart
+                        </a>
+                        <a href="pond.html" class="navbar-item">
+                            Pond
+                        </a>
+                        <hr class="navbar-divider">
+                        <a class="navbar-item">
+                            Report an issue
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a href="#" class="button is-black" onclick="logoutConfirmation()">
+                            Log out
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero is-light is-fullheight">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <div class="container is-full-hd">
+                    <div class="card transparent-card"> <!-- Added a class "transparent-card" -->
+                        <div class="card-body">
+                            <h2 class="title is-1">I'm Sorry, Babii</h2>
+                            <p class="subtitle is-4">I love you more than words can express. Please forgive me.
+                            </p>
+                            <figure>
+                                <img src="img/sorry.png" alt="" width="150">
+
+                                <div class="pb-5">
+                                  <button class="js-modal-trigger button is-black" data-target="videoModal">Open</button>
+                                </div>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="videoModal" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <div class="modal-card">
+            <div class="modal-card-body">
+                <div class="has-text-centered">
+                     <video src="video/panalangin.mp4" controls="" width="400"></video>
+                </div>
+            </div>
+        </div>
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <script src="js/bulma.js"></script>
+    <script>
+        function logoutConfirmation(){
+            if(confirm('Are you sure you want to log out?')){
+                window.location.href='login.html';
+            }
+        }
+    </script>
+</body>
+</html>

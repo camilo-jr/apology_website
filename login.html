@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+	<style>
+		h1{
+			color:black !important;
+		}
+        .p{
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 50px;
+        }
+        a{
+            text-align: center !important;
+            text-decoration: underline;
+            color:red !important;
+        }
+    </style>
+</head>
+<body>
+ <section class="hero is-fullheight is-primary">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-one-third">
+                    <form class="box" id="loginForm">
+                        <h1 class="title is-4 has-text-centered">Login</h1>
+                        <div class="field">
+                            <label class="label">Username</label>
+                            <div class="control">
+                                <input class="input" type="text" id="username" placeholder="Enter your username">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Password</label>
+                            <div class="control has-icons-right">
+                                <input class="input" type="password" id="password" placeholder="Enter your password">
+                                <span class="icon is-small is-right" id="togglePasswordVisibility">
+                                    <i class="fas fa-eye"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <p class="mb-4 has-text-centered"><a class="js-modal-trigger is-danger" data-target="myModal">Password Here!</a></p>
+                        <div class="field">
+                            <div class="control">
+                                <button class="button is-primary is-fullwidth" type="submit">Login</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="myModal" class="modal">
+  <div class="modal-background"></div>
+
+  <div class="modal-content">
+    <div class="box">
+      <p>The password here is my birthday with this format example 09/09/2002.</p>
+      <!-- Your content -->
+    </div>
+  </div>
+
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+<script>
+        // JavaScript to handle form submission
+        document.getElementById("loginForm").addEventListener("submit", function (e) {
+        	e.preventDefault();
+            var usernameInput = document.getElementById("username").value.toLowerCase(); // Convert to lowercase
+            var passwordInput = document.getElementById("password").value;
+
+            // Check if the entered username and password match
+            if (usernameInput === "babii" && passwordInput === "06/20/1998") {
+                // Redirect to index.html
+                window.location.href = "index.html";
+            } else {
+            	alert("Invalid username or password. Please try again.");
+            }
+        });
+    </script>
+    <script src="js/bulma.js"></script>
+</body>
+</html>

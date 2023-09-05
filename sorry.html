@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sorry letter</title>
+	<link rel="stylesheet" href="css/sorry.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+	<style>
+		body{
+			font-family: arial;
+		}
+		h1{
+			font-size: 18px !important;
+		}
+		p{
+			text-align: justify;
+			text-indent: 1.5rem;
+			font-size: 0.45cm;
+			color: black;
+			padding-bottom: 0.5cm;
+		}
+		.sorry{
+			padding-top: 150px;
+		}
+		figcaption{
+			font-size: 22px;
+		}
+		.closing-text{
+			text-indent: 0px !important;
+		}
+		.navbar{
+			box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+		}
+	</style>
+</head>
+<body>
+	<nav class="navbar is-light is-fixed-top" role="navigation" aria-label="main navigation">
+		<div class="navbar-brand">
+			<a class="navbar-item" href="#">
+				<strong style="color: #000; font-weight: 900;">I LOVE YOU</strong>
+			</a>
+
+			<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+			</a>
+		</div>
+
+		<div id="navbarBasicExample" class="navbar-menu">
+			<div class="navbar-start">
+				<a href="index.html" class="navbar-item">
+					Home
+				</a>
+
+				<a href="flower.html" class="navbar-item">
+					Flower
+				</a>
+
+				<div class="navbar-item has-dropdown is-hoverable">
+					<a class="navbar-link">
+						More
+					</a>
+
+					<div class="navbar-dropdown">
+						<a href="sorry.html" class="navbar-item">
+							Letter
+						</a>
+						<a href="heart.html" class="navbar-item">
+							Heart
+						</a>
+						<a href="pond.html" class="navbar-item">
+							Pond
+						</a>
+						<hr class="navbar-divider">
+						<a class="navbar-item">
+							Report an issue
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="navbar-end">
+				<div class="navbar-item">
+					<div class="buttons">
+						<a href="#" class="button is-black" onclick="logoutConfirmation()">
+							Log out
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<div id="header-plugin"></div>
+
+	<div class="bg_heart"></div>
+
+	<div class="envelope">
+		<div class="back"></div>
+		<div class="letter">
+			<div class="text">
+				<h1>I Love You Babii</h1>
+				<div class="text-center">
+					<button type="button" class="js-modal-trigger button is-small is-danger" data-target="modal-js-example" onclick='playAudio()'>Open</button>
+				</div>
+			</div>
+		</div>
+		<div class="front"></div>
+		<div class="top"></div>
+		<div class="shadow"></div>
+	</div>
+	
+	<audio src="audio/audio5.mp3" id="audio5"></audio>
+
+
+
+
+	<div  id="modal-js-example" class="modal">
+		<div class="modal-background"></div>
+		<div class="modal-card">
+			<header class="modal-card-head">
+				<p class="modal-card-title"></p>
+				<button class="delete" aria-label="close" onclick="pauseAudio()"></button>
+			</header>
+
+			<section class="modal-card-body">
+
+				<h4>Good morning Babii,</h4>
+				<br/>
+				<p>
+					I know that this morning is not good for you, but all I want to say is sorry for what I did last night. 
+				</p>
+				<p>I am so very upset about what I did, and I, your boyfriend, repent deeply for what I did, and I promise to do my best again to prove to you how much I love you.
+				</p>
+
+				<p> I know no words can define how I really felt sorry for what I had done, and this morning, all I want to say is that I love you and am so afraid to lose you because you are my life and my home 🏡 forever.
+				</p>
+
+				<p class="closing-text">I love you more than 500 trillion Tons.💋</p>
+			</section>
+		</div>
+	</div>
+	
+	<script src="js/bulma.js"></script>
+	<script>
+		var x = document.getElementById("audio5"); 
+
+		function playAudio() { 
+			x.play(); 
+		} 
+
+		function pauseAudio() { 
+			x.pause(); 
+		} 
+
+        function logoutConfirmation(){
+            if(confirm('Are you sure you want to log out?')){
+                window.location.href='login.html';
+            }
+        }
+    </script>
+</body>
+</body>
+</html>
